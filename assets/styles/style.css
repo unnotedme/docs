@@ -96,3 +96,17 @@ header a {
     text-decoration: underline;
     cursor: pointer;
 }
+
+/* article */
+
+.article {
+    padding: 0 0 0 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.article p {
+    font-size: 16px;
+    padding: 0 0 0 20px;
+    margin: 0;
+}
