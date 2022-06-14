@@ -19,21 +19,108 @@
 <body>
     <header>
         <button\><a href="..\..\index.html">&#128193;</a></button>
-        <button><a
-                href="https://twitter.com/intent/tweet?url=www.unnotedme.github.io%2Fdocs&text=check%20out%20this%20site%20with%20study%20materials%20for%20programming%20by%20%40unnotedme"
-                target="_blank">&#128279;</a></button>
-        <button id="toggle">&#127768;</button>
+            <button><a
+                    href="https://twitter.com/intent/tweet?url=www.unnotedme.github.io%2Fdocs&text=check%20out%20this%20site%20with%20study%20materials%20for%20programming%20by%20%40unnotedme"
+                    target="_blank">&#128279;</a></button>
+            <button id="toggle">&#127768;</button>
     </header>
+
     <section class="title">
         <h1>&#128193;</h1>
         <h2>kotlin</h2>
-        <p>to be created.</p>
+        <p>kotlin is a modern and java compatible language (java code and libraries can be used in kt programs). is
+            usually used for mobile applications (mainly android), web development and server-side applications.</p>
         <hr>
     </section>
 
+    <section class="article">
+        <section class="basics">
+            <h3>basics</h3>
+            <h4>function</h4>
+            <p>a function is a segment of a program that performs a specific task.</p>
+            <code>fun main() {
+                println("Hello World")
+                }</code>
+            <p>these two concepts are important while coding:</p>
+            <ul>
+                <li>reusable code: rather than copying and pasting code that you need to use more than once, you can
+                    simply
+                    call a function wherever needed.</li>
+                <li>readability: ensuring functions do one and only one specific task helps other developers and
+                    teammates,
+                    as well as your future self to know exactly what a piece of code does.</li>
+            </ul>
+            <p>functions can take parameters, which are variables available inside a function body.</p>
+            <p>arguments are the values that you pass in when you call a function.</p>
+            <p>you can name arguments when you call a function. when you use named arguments, you can reorder the
+                arguments
+                without affecting the output.</p>
+            <p>you can specify a default argument that lets you omit the argument when you call a function.</p>
+
+            <h4>comments</h4>
+            <p>kotlin comments = // or /* */ </p>
+
+            <h4>variables</h4>
+            <p>a variable is a container for a single piece of data.</p>
+            <p>while developing an app, you have placeholders for some data, while other parts of the app stay the same.
+                those placeholders are a great opportunity to use variables to hold each piece of information.</p>
+            <p>you must define a variable first in your code before you can use the variable.
+
+                when you define a variable, you assign a name to uniquely identify it. you also decide what type of data
+                it can hold by specifying the data type. lastly, you can provide an initial value that will be stored in
+                the variable, but this is optional.</p>
+            <code>var variableName = value
+                val variableName = value</code>
+            <p>var = can be modified
+
+                val = can't be modified</p>
+            <p>kotlin understand if it is a String or an Int variable, but you can specify it:</p>
+            <code>var name: String = "John" // String
+                val birthyear: Int = 1975 // Int
+
+                println(name)
+                println(birthyear)</code>
+            <p>for displaying variables, you can simply use the + character.</p>
+            <table>
+                <tr>
+                    <th>data type</th>
+                    <th>what kind of data it can contain</th>
+                    <th>example</th>
+                </tr>
+                <tr>
+                    <td>String</td>
+                    <td>text</td>
+                    <td>"search"</td>
+                </tr>
+                <tr>
+                    <td>Int</td>
+                    <td>whole integer numbers</td>
+                    <td>-1</td>
+                </tr>
+                <tr>
+                    <td>Double</td>
+                    <td>decimal numbers</td>
+                    <td>3.14</td>
+                </tr>
+                <tr>
+                    <td>Float</td>
+                    <td>decimal number (that is less precise than a Double). has an f or F at the end of the number.</td>
+                    <td>1.263869F</td>
+                </tr>
+                <tr>
+                    <td>Boolean</td>
+                    <td>true or false</td>
+                    <td>true</td>
+                </tr>
+            </table>
+            <p>to increment a variable you can use +1 or ++.
+            to decrement a variable you can use - -.</p>
+        </section>
+    </section>
+
     <article class="article">
-        
+
     </article>
-    
+
     <script src="\scripts\script.js"></script>
 </body>
