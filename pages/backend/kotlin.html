@@ -27,100 +27,157 @@
 
     <section class="title">
         <h1>&#128193;</h1>
-        <h2>kotlin</h2>
-        <p>kotlin is a modern and java compatible language (java code and libraries can be used in kt programs). is
+        <h2>Kotlin</h2>
+        <p>Kotlin is a modern and java compatible language (java code and libraries can be used in kt programs). Is
             usually used for mobile applications (mainly android), web development and server-side applications.</p>
         <hr>
     </section>
 
     <section class="article">
-        <section class="basics">
-            <h3>basics</h3>
-            <h4>function</h4>
-            <p>a function is a segment of a program that performs a specific task.</p>
-            <code>fun main() {
-                println("Hello World")
-                }</code>
-            <p>these two concepts are important while coding:</p>
-            <ul>
-                <li>reusable code: rather than copying and pasting code that you need to use more than once, you can
-                    simply
-                    call a function wherever needed.</li>
-                <li>readability: ensuring functions do one and only one specific task helps other developers and
-                    teammates,
-                    as well as your future self to know exactly what a piece of code does.</li>
-            </ul>
-            <p>functions can take parameters, which are variables available inside a function body.</p>
-            <p>arguments are the values that you pass in when you call a function.</p>
-            <p>you can name arguments when you call a function. when you use named arguments, you can reorder the
-                arguments
-                without affecting the output.</p>
-            <p>you can specify a default argument that lets you omit the argument when you call a function.</p>
+        <h2 id="fundamentals">Fundamentals</h2>
+        <h3 id="function">Function</h3>
+        <p>A function <em>i</em>s a segment of a program that performs a specific task. </p>
+        <p>You can group one or more expressions into a <em>function.</em> Rather than repeating the same series of
+            expressions each time that you need a result, you can wrap the expressions in a function and call that
+            function instead.</p>
+        <pre><code class="lang-kotlin"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> {
+          println(<span class="string">"Hello World"</span>)
+        }
+        </code></pre>
+        <p> <strong>fun name (input) {</strong></p>
+        <p><strong>body</strong></p>
+        <p><strong>}</strong></p>
+        <p>These two concepts are important while coding:</p>
+        <ul>
+            <li>Reusable code: Rather than copying and pasting code that you need to use more than once, you can simply
+                call a function wherever needed.</li>
+            <li>Readability: Ensuring functions do one and only one specific task helps other developers and teammates,
+                as well as your future self to know exactly what a piece of code does.</li>
+        </ul>
+        <p>Functions can take parameters, which are variables available inside a function body.</p>
+        <p>Arguments are the values that you pass in when you call a function</p>
+        <p>You can name arguments when you call a function. when you use named arguments, you can reorder the arguments
+            without affecting the output.</p>
+        <p>You can specify a default argument that lets you omit the argument when you call a function</p>
+        <h3 id="comments">Comments</h3>
+        <p>Kotlin comments = // or /<em> </em>/ </p>
+        <h3 id="variables">Variables</h3>
+        <p>A variable is a container for a single piece of data.</p>
+        <p>While developing an app, you have placeholders for some data, while other parts of the app stay the same.
+            Those placeholders are a great opportunity to use variables to hold each piece of information.</p>
+        <p>You must define a variable first in your code before you can use the variable.</p>
+        <p>When you <strong>define </strong>a variable, you assign a name to uniquely identify it. You also decide what
+            type of data it can hold by specifying the data type. Lastly, you can provide an initial value that will be
+            stored in the variable, but this is optional.</p>
+        <pre><code class="lang-kotlin"><span class="keyword">var</span> variableName = <span class="keyword">value</span>
+        val variableName = <span class="keyword">value</span>
+        </code></pre>
+        <p>var = can be modified</p>
+        <p>val = can't be modified</p>
+        <p>Kotlin understands if it is a String or an Int variable, but you can specify it:</p>
+        <pre><code class="lang-kotlin"><span class="selector-tag">var</span> name: String = <span class="string">"John"</span> <span class="comment">// String</span>
+        val birthyear: Int = <span class="number">1975</span> <span class="comment">// Int</span>
+        
+        <span class="function"><span class="title">println</span><span class="params">(name)</span></span>
+        <span class="function"><span class="title">println</span><span class="params">(birthyear)</span></span>
+        </code></pre>
+        <p>For displaying variables, you can simply use the + character.</p>
+        <p>To increment a variable you can use +1 or ++.</p>
+        <p>To decrement a variable you can use - -.</p>
+        <h3 id="conditionals">Conditionals</h3>
+        <p>Conditionals are commands in programming languages that handle decisions. With conditionals, code is dynamic,
+            which means that it can behave differently given a different condition.</p>
+        <h3 id="if-else">If/else</h3>
+        <p>Decision-making is also a fundamental concept in programming. You write instructions about how a program
+            should behave in a given situation so that it can act or react accordingly when the situation occurs. In
+            kotlin, when you want your program to perform different actions based on a condition, you can use an
+            <code>if/else</code> statement.</p>
+        <pre><code class="lang-kotlin"><span class="keyword">if</span> (condition) {
+            <span class="selector-tag">body</span> <span class="number">1</span>
+        } <span class="keyword">else</span> {
+                <span class="selector-tag">body</span> <span class="number">2</span>
+        }
+        </code></pre>
+        <h3 id="if-else-elseif">If/else/elseif</h3>
+        <p>When you face multiple decision points, you need to create conditionals with multiple layers of conditions,
+            which you can do when you add <code>else if</code> branches to <code>if/else</code> statements.</p>
+        <pre><code class="lang-kotlin"><span class="keyword">if</span> (condition) {
+            <span class="selector-tag">body</span> <span class="number">1</span>
+        } elseif (condition <span class="number">2</span>) {
+                <span class="selector-tag">body</span> <span class="number">2</span>
+        } <span class="keyword">else</span> {
+                <span class="selector-tag">body</span> <span class="number">3</span>
+        }
+        </code></pre>
+        <h3 id="operators">Operators</h3>
+        <p>Besides the <code>==</code> comparison operator, there are additional <em>comparison operators</em> that you
+            can use to create boolean expressions:</p>
+        <ul>
+            <li>less than: <code>&lt;</code></li>
+            <li>greater than: <code>&gt;</code></li>
+            <li>less than or equal to: <code>&lt;=</code></li>
+            <li>greater than or equal to: <code>&gt;=</code></li>
+            <li>not equal to: <code>!=</code></li>
+        </ul>
+        <h3 id="when">When</h3>
+        <p>In kotlin, when you deal with multiple branches, you can use the <code>when</code> statement instead of the
+            <code>if/else</code> statement because it improves readability, which refers to how easy it is for human
+            readers, typically developers, to read the code. It&#39;s very important to consider readability when you
+            write your code because It&#39;s likely that other developers need to review and modify your code throughout
+            its lifetime. Good readability ensures that developers can correctly understand your code and don&#39;t
+            inadvertently introduce bugs into it.</p>
+        <p><code>when</code> statements are preferred when there are more than two branches to consider.</p>
+        <pre><code class="lang-kotlin"><span class="function"><span class="title">when</span><span class="params">(parameter)</span></span> {
+            condition <span class="number">1</span> → <span class="selector-tag">body</span> <span class="number">1</span>
+            condition <span class="number">2</span> → <span class="selector-tag">body</span> <span class="number">2</span>
+            condition <span class="number">3</span> → <span class="selector-tag">body</span> <span class="number">3</span>
+        }
+        </code></pre>
+        <ul>
+            <li>use comma for multiple conditions:</li>
+        </ul>
+        <pre><code class="lang-kotlin"><span class="function"><span class="title">when</span><span class="params">(parameter)</span></span> {
+            condition <span class="number">1</span>, condition <span class="number">2</span> → <span class="selector-tag">body</span> <span class="number">1</span>&amp;<span class="number">2</span>
+            condition <span class="number">3</span> → <span class="selector-tag">body</span> <span class="number">3</span>
+        }
+        </code></pre>
+        <ul>
+            <li>use “in” for a range of conditions:</li>
+        </ul>
+        <pre><code class="lang-kotlin"><span class="keyword">when</span>(parameter) {
+            <span class="keyword">in</span> <span class="keyword">range</span> start .. <span class="keyword">range</span> <span class="keyword">end</span> → body1
+            condition <span class="number">2</span> → <span class="keyword">body</span> <span class="number">2</span>
+        }
+        </code></pre>
+        <ul>
+            <li>use “is” to check data type</li>
+        </ul>
+        <pre><code class="lang-kotlin"><span class="function"><span class="title">when</span><span class="params">(parameter)</span></span> {
+            is type → <span class="selector-tag">body</span> <span class="number">1</span>
+            condition <span class="number">2</span> →  <span class="selector-tag">body</span> <span class="number">2</span>
+        }
+        </code></pre>
+        <h3 id="classes">Classes</h3>
+        <p>Class hierarchy: an arrangement where classes are organized in a hierarchy of parents and
+            children. hierarchy diagrams are usually drawn with the parents shown above children.</p>
+        <p>Child or subclass: any class that is below another class in the hierarchy.</p>
+        <p>Parent or superclass or base class: any class with one or more child classes.</p>
+        <p>Root or top-level class: the class at the top (or root) of the class hierarchy.</p>
+        <p>Inheritance: when a child class includes (or inherits) all the properties and methods of its
+            parent class. this allows you to share and reuse code, which makes programs easier to understand and
+            maintain.</p>
+        <p>An &quot;abstract&quot; class is a class that cannot be instantiated because it is not fully implemented. You
+            can think of it as a sketch. A sketch incorporates the ideas and plans for something, but not usually enough
+            information to build it. You use a sketch (abstract class) to create a blueprint (class) from which you
+            build the actual object instance.</p>
+        <p>A common benefit of creating a superclass is to contain properties and functions that are common to all its
+            subclasses. If the values of properties and implementations of functions are not known, make the class
+            abstract.</p>
+        <p>Class functions and encapsulation - Classes use functions to model behavior. Functions can modify state,
+            helping you to expose only the data that you wish to expose. This access control is part of a larger
+            object-oriented concept known as encapsulation.</p>
 
-            <h4>comments</h4>
-            <p>kotlin comments = // or /* */ </p>
+        </article>
 
-            <h4>variables</h4>
-            <p>a variable is a container for a single piece of data.</p>
-            <p>while developing an app, you have placeholders for some data, while other parts of the app stay the same.
-                those placeholders are a great opportunity to use variables to hold each piece of information.</p>
-            <p>you must define a variable first in your code before you can use the variable.
-
-                when you define a variable, you assign a name to uniquely identify it. you also decide what type of data
-                it can hold by specifying the data type. lastly, you can provide an initial value that will be stored in
-                the variable, but this is optional.</p>
-            <code>var variableName = value
-                val variableName = value</code>
-            <p>var = can be modified
-
-                val = can't be modified</p>
-            <p>kotlin understand if it is a String or an Int variable, but you can specify it:</p>
-            <code>var name: String = "John" // String
-                val birthyear: Int = 1975 // Int
-
-                println(name)
-                println(birthyear)</code>
-            <p>for displaying variables, you can simply use the + character.</p>
-            <table>
-                <tr>
-                    <th>data type</th>
-                    <th>what kind of data it can contain</th>
-                    <th>example</th>
-                </tr>
-                <tr>
-                    <td>String</td>
-                    <td>text</td>
-                    <td>"search"</td>
-                </tr>
-                <tr>
-                    <td>Int</td>
-                    <td>whole integer numbers</td>
-                    <td>-1</td>
-                </tr>
-                <tr>
-                    <td>Double</td>
-                    <td>decimal numbers</td>
-                    <td>3.14</td>
-                </tr>
-                <tr>
-                    <td>Float</td>
-                    <td>decimal number (that is less precise than a Double). has an f or F at the end of the number.</td>
-                    <td>1.263869F</td>
-                </tr>
-                <tr>
-                    <td>Boolean</td>
-                    <td>true or false</td>
-                    <td>true</td>
-                </tr>
-            </table>
-            <p>to increment a variable you can use +1 or ++.
-            to decrement a variable you can use - -.</p>
-        </section>
-    </section>
-
-    <article class="article">
-
-    </article>
-
-    <script src="\scripts\script.js"></script>
+        <script src="\scripts\script.js"></script>
 </body>
